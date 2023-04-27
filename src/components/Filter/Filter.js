@@ -6,6 +6,7 @@ export const Filter = ({ filter, onInputChange }) => {
     return (
         <>
             <label>
+                Find contacts by name
                 <FilterInput
                     onChange={onInputChange}
                     value={filter}
