@@ -32,15 +32,16 @@ export class App extends Component {
     ) {
       alert(`This phone number is already in contacts`);
     } else {
-      this.setState(prevState => {
-        const list = [...prevState.contacts]; 
-        list.push({
-          id: nanoid(),
-          name: name,
-          number: number,
-        });
-        return { contacts: list };
-      });
+      this.setState(prevState => ({
+        contacts: [
+          ...prevState.contacts,
+          {
+            id: nanoid(),
+            name: name,
+            number: number
+          }
+        ]
+      }))
     }
   };
 
